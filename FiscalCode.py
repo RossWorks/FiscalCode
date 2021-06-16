@@ -68,6 +68,7 @@ def GetCity(BirthTown: str):
 def GetName(Name: str):
 	vowels=('A','E','I','O','U')
 	Letters=""
+	outString=""
 	Name=Name.upper()
 	if (len(Name)<3):
 		outString=Name.ljust(3,'X')
@@ -88,13 +89,13 @@ def GetName(Name: str):
 		outString=Letters
 		return outString
 	if (len(Letters)<3):
-		outString=Letters
 		for i in Name:
 			for j in vowels:
 				if (i==j):
 					Letters+=i
 					if (len(Letters)>=3):
 						outString+=Letters
+						return outString
 
 def GetSurame(Name: str):
 	Name=Name.upper()
