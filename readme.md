@@ -88,3 +88,4 @@ Ferruccio Lamborghini born in Renazzo, April 28th, 1916<br>
   - 6 =  6
   - 9 = 21
   - Sum is 103, the remainder of 103/26 is 25 -> Z
+- Final code is: LMBFRC16D28C469Z
