@@ -53,16 +53,12 @@ def GenerateCode():
 	return 0
 
 def GetCity(BirthTown: str):
-	LineCounter=0
-	TestCity=''
 	BirthTown=BirthTown.upper()
 	with open('Cities.csv','r',encoding='UTF-8') as CitiesFile:
 		CitiesList=csv.reader(CitiesFile,delimiter=';')
 		for row in CitiesList:
-			if (LineCounter>0):
-				if (row[0].upper()==BirthTown):
-					return row[1]
-			LineCounter+=1
+			if (row[0].upper()==BirthTown):
+				return row[1]
 	return 'ZZZZ'
 
 def GetName(Name: str):
@@ -140,7 +136,7 @@ def SetBirth(DateOfBirth: str):
 HomePage=tk.Tk()
 HomePage.title("Codice Fiscale")
 HomePage.iconbitmap('Icon.ico')
-HomePage.geometry("400x400")
+HomePage.resizable(False,False)
 
 LblName=tk.Label(text="Nome: ")
 LblName.grid(column=0,row=0)
